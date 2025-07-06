@@ -1,8 +1,9 @@
 import streamlit as st
-import openai
+import openai import OpenAI
 import os
 
 # Set your OpenAI API key
+client = OpenAI()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Product list (you can update this later with real products)
@@ -49,7 +50,8 @@ If the product is not listed, politely say: "Sorry, it's not currently listed."
 """
 
     # OpenAI Chat Response
-    response = openai.ChatCompletion.create(
+    client = OpenAI()
+    response = client.Chat.Completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": system_prompt},
