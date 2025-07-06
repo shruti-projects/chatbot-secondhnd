@@ -51,7 +51,7 @@ If the product is not listed, politely say: "Sorry, it's not currently listed."
 
     # OpenAI Chat Response
     
-    response = openai.ChatCompletion.create(
+    response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": system_prompt},
