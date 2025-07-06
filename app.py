@@ -1,5 +1,5 @@
 import streamlit as st
-import openai import OpenAI
+import OpenAI
 import os
 
 # Set your OpenAI API key
